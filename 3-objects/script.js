@@ -12,6 +12,14 @@ const bus = {
     equipments: ['sae', 'tft', 'speech']
 };
 
+let length = Object.keys(bus).length
+for (let i = 0; i< length; i++){
+    console.log(Object.keys(bus)[i],': ',Object.values(bus)[i])
+}
+
 //3.2 Object.values
 
-console.log(data);
+for (const key in data) {
+  const restriction = data[key];
+  console.log(key, "->", restriction.texte);
+}
