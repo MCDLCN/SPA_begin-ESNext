@@ -9,8 +9,8 @@ function first() {
   return sleep(300).then(() => {console.log('message 1');});
 }
 
-function second() {
-  return sleep(100).then(() => {console.log('message 2');});
+function second(sec) {
+  return sleep(sec).then(() => {console.log('message 2');});
 }
 
 function third() {
@@ -28,7 +28,7 @@ third();
 */
 
 
-//first().then(second).then(third);
+first().then(() => second(2000)).then(third);
 
 //first().then(secondWithError).then(third);
 
